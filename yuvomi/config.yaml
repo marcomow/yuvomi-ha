@@ -1,0 +1,37 @@
+name: Yuvomi
+version: "0.71.10"
+slug: yuvomi
+description: Self-hosted family planner — tasks, shopping, meals, calendar, budget, health & more
+url: https://github.com/marcomow/yuvomi-ha/tree/main/yuvomi
+arch:
+  - amd64
+  - aarch64
+init: false
+startup: services
+boot: auto
+map:
+  - share:rw
+ports:
+  3000/tcp: 3000
+ports_description:
+  3000/tcp: Yuvomi web interface
+webui: http://[HOST]:[PORT:3000]
+watchdog: http://[HOST]:[PORT:3000]/health
+options:
+  log_level: info
+  db_encryption_key: ""
+  backup_enabled: true
+  backup_schedule: "0 2 * * *"
+  backup_keep: 7
+  local_document_storage: true
+  env_vars: []
+schema:
+  log_level: list(debug|info|warn|error)
+  db_encryption_key: password
+  backup_enabled: bool
+  backup_schedule: str
+  backup_keep: int(1,365)
+  local_document_storage: bool
+  env_vars:
+    - name: match(^[A-Z][A-Z0-9_]*$)
+      value: str

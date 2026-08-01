@@ -1,0 +1,29 @@
+configuration:
+  log_level:
+    name: Log level
+    description: Verbosity of the Yuvomi server logs.
+  db_encryption_key:
+    name: Database encryption key
+    description: >-
+      Optional AES-256 key for database encryption at rest. Set before first
+      start; changing it later makes the existing database unreadable.
+  backup_enabled:
+    name: Automated backups
+    description: Enable Yuvomi's built-in scheduled backups.
+  backup_schedule:
+    name: Backup schedule
+    description: Cron expression for automated backups (default 0 2 * * *).
+  backup_keep:
+    name: Backups to keep
+    description: Number of backup archives to retain.
+  local_document_storage:
+    name: Local document storage
+    description: >-
+      Store uploaded documents locally under /share/yuvomi/documents.
+  env_vars:
+    name: Additional environment variables
+    description: >-
+      Extra Yuvomi environment variables (weather, SMTP, calendar sync, OIDC,
+      ...). See the upstream .env.example for available options.
+network:
+  3000/tcp: Yuvomi web interface

@@ -1,0 +1,8 @@
+build_from:
+  amd64: ghcr.io/ulsklyc/yuvomi:0.71.10
+  aarch64: ghcr.io/ulsklyc/yuvomi:0.71.10
+labels:
+  org.opencontainers.image.title: Yuvomi
+  org.opencontainers.image.description: Self-hosted family planner as a Home Assistant add-on
+  org.opencontainers.image.source: https://github.com/marcomow/yuvomi-ha
+  org.opencontainers.image.licenses: MIT
