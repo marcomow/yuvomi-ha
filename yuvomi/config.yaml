@@ -8,7 +8,6 @@ arch:
   - aarch64
 init: false
 startup: services
-boot: auto
 map:
   - share:rw
 ports:
@@ -16,7 +15,6 @@ ports:
 ports_description:
   3000/tcp: Yuvomi web interface
 webui: http://[HOST]:[PORT:3000]
-watchdog: http://[HOST]:[PORT:3000]/health
 options:
   log_level: info
   db_encryption_key: ""

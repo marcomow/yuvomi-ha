@@ -7,6 +7,8 @@
 - Upstream database migrations run automatically on first start and are
   one-way: take a backup before updating, and restore that backup if you ever
   need to roll the add-on back to 0.71.10
+- Replace the obsolete `watchdog` option with a Docker `HEALTHCHECK` on
+  `/health` and drop the redundant `boot: auto` (add-on linter)
 
 ## 0.71.10
 
