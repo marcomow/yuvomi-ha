@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/ulsklyc/yuvomi:2.69.1
+ARG BUILD_FROM=ghcr.io/ulsklyc/yuvomi:2.71.0
 FROM ${BUILD_FROM}
 
 COPY export-env.js /usr/local/lib/yuvomi-addon/export-env.js

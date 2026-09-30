@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.71.0
+
+- Bump Yuvomi to [v2.71.0](https://github.com/ulsklyc/yuvomi/releases/tag/v2.71.0)
+  (`ghcr.io/ulsklyc/yuvomi:2.71.0`, amd64 and aarch64), including the
+  [v2.70.0](https://github.com/ulsklyc/yuvomi/releases/tag/v2.70.0) release
+- Upstream database migrations run automatically on first start and are
+  one-way: take a backup before updating, and restore that backup if you ever
+  need to roll the add-on back to 2.69.1
+
 ## 2.69.1
 
 - Bump Yuvomi to [v2.69.1](https://github.com/ulsklyc/yuvomi/releases/tag/v2.69.1)
