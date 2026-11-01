@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.71.0-1
+
+- Patch the MCP `call_api_operation` tool so AI agents stop failing with
+  "Missing path parameter: id": adds a top-level `id` shorthand, declares
+  `path_params.id` explicitly, marks `path_params` / `query` / `payload` as
+  open objects (`additionalProperties: true`) and accepts JSON strings for
+  `path_params` and `query`. Some LLM providers dropped the contents of the
+  previously property-less object arguments
+
 ## 2.71.0
 
 - Bump Yuvomi to [v2.71.0](https://github.com/ulsklyc/yuvomi/releases/tag/v2.71.0)

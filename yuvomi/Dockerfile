@@ -3,6 +3,11 @@ FROM ${BUILD_FROM}
 
 COPY export-env.js /usr/local/lib/yuvomi-addon/export-env.js
 COPY run.sh /run.sh
+
+# Make the MCP call_api_operation tool robust to models that send empty
+# path_params / payload objects (see patch-mcp-args.js).
+COPY patch-mcp-args.js /usr/local/lib/yuvomi-addon/patch-mcp-args.js
+RUN node /usr/local/lib/yuvomi-addon/patch-mcp-args.js /app/server/mcp/tools.js
 RUN chmod a+x /run.sh
 
 # The Supervisor watchdog follows the container health status.
