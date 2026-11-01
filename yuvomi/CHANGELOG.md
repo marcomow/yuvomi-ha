@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.83.0
+
+- Bump Yuvomi to [v2.83.0](https://github.com/ulsklyc/yuvomi/releases/tag/v2.83.0)
+  (`ghcr.io/ulsklyc/yuvomi:2.83.0`, amd64 and aarch64), including every
+  upstream release from
+  [v2.72.0](https://github.com/ulsklyc/yuvomi/releases/tag/v2.72.0) onwards
+  (see the [upstream changelog](https://github.com/ulsklyc/yuvomi/blob/v2.83.0/CHANGELOG.md))
+- The MCP `call_api_operation` build-time patch from 2.71.0-1 still applies
+  unchanged to this release
+- Upstream database migrations run automatically on first start and are
+  one-way: take a backup before updating, and restore that backup if you ever
+  need to roll the add-on back to 2.71.0-1
+
 ## 2.71.0-1
 
 - Patch the MCP `call_api_operation` tool so AI agents stop failing with
